@@ -57,7 +57,7 @@ ul {
   cursor: pointer;
   color: var(--icon-color);
   font-size: 1.3rem;
-  transition: ease-in-out 0.4s;
+  transition: all 0.4s ease-in-out;
 }
 
 .menu-desktop {
@@ -80,7 +80,7 @@ ul {
 
 .logo {
   width: 4rem;
-  height: 4rem;
+  height: 2rem;
 }
 
 .menu-text {
@@ -89,6 +89,13 @@ ul {
   font-weight: bold;
 }
 
-@media (min-width:768px) {
-    
+@media (min-width: 768px) {
+  .menu-desktop {
+  }
+
+  .header-toggle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
