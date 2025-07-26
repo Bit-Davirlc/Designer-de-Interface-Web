@@ -1,9 +1,27 @@
-ul {
-  list-style-type: none;
+* {
   margin: 0;
   padding: 0;
 }
 
-li {
-  display: inline;
+body {
+  background-color: #111217;
+  color: rgb(214, 214, 214);
+  font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(214, 214, 214);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#header {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* margin: 25px 50px 75px 100px; */
+  padding: 0.5rem 1rem;
 }
