@@ -53,6 +53,12 @@ ul {
   border-bottom: 2px solid var(--primary-color);
 }
 
+.header-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
 #toggleTheme {
   cursor: pointer;
   color: var(--icon-color);
@@ -91,11 +97,11 @@ ul {
 
 @media (min-width: 768px) {
   .menu-desktop {
+    display: flex;
+    min-width: 30%;
   }
 
   .header-toggle {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    min-width: 30%;
   }
 }
