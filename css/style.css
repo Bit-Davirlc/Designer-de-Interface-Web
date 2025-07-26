@@ -13,6 +13,11 @@
   --icon-color: #5a68ad;
 }
 
+/* Necessario alterar cores dos elementos para os temas diferentes */
+html[data-theme="light"] .logo {
+  filter: invert(0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +42,7 @@ ul {
 #header {
   /* ID = # */
   display: flex;
-  flex-wrap: row wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   background: #111217;
@@ -52,7 +57,7 @@ ul {
   cursor: pointer;
   color: var(--icon-color);
   font-size: 1.3rem;
-  transition:  ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .menu-desktop {
@@ -69,8 +74,13 @@ ul {
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
   color: #f8f8f8;
-  text-decoration: underline  #5a68ad 2px;
+  text-decoration: underline #5a68ad 2px;
   text-underline-offset: 0.5rem;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
 }
 
 .menu-text {
