@@ -29,6 +29,7 @@ body {
   color: var(--primary-color);
   font-size: 1rem;
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
+  /*   transition: all 0.4s ease-in-out; */
 }
 
 a {
@@ -48,15 +49,16 @@ ul {
   background: #111217;
   width: 100%;
   padding: 1rem 5rem;
-  /* z-index: ;
-  position: ; */
+  z-index: ;
+  position: relative;
   border-bottom: 2px solid var(--primary-color);
+  /* transition: all 0.4s ease-in-out; */
 }
 
 .header-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 #toggleTheme {
@@ -66,9 +68,16 @@ ul {
   transition: all 0.4s ease-in-out;
 }
 
+#menuHamburguer {
+  cursor: pointer;
+  /*   color: var(--icon-color); */
+  font-size: 1.3rem;
+  transition: all 0.4s ease-in-out;
+}
+
 .menu-desktop {
   /* Class = . */
-  /* display: none; */
+  display: none;
 }
 
 .menu {
