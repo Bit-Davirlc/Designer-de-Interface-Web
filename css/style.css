@@ -18,21 +18,20 @@
 }
 
 /* Necessario alterar cores dos elementos para os temas diferentes */
-html[data-theme="light"] .logo {
-    filter: invert(0);
+html[data-theme="dark"] .logo {
+  filter: invert(1);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: var(--primary-bg-color);
   color: var(--primary-color);
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", sans-serif;
 }
 
 a {
@@ -56,7 +55,6 @@ ul {
   position: relative;
   border-bottom: 2px solid var(--primary-color);
   background: var(--secondary-color);
-  
 }
 
 .menu-desktop {
@@ -80,14 +78,12 @@ ul {
 .logo {
   width: 4rem;
   height: 2rem;
-  filter: invert(1);
 }
 
 .header-toggle {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
 }
 
 #toggleTheme {
@@ -156,8 +152,7 @@ ul {
   padding: 0.5rem 0;
 }
 
-
-.main-content{
+.main-content {
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
   text-align: left;
   margin: 1px 1px 1px 1px;
