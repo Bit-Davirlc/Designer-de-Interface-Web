@@ -3,14 +3,18 @@
 :root[data-theme="dark"] {
   --primary-bg-color: #111217;
   --primary-color: #e9e9e9;
+  --secondary-color: #111217;
   --icon-color: #e69143;
+  --text-color: grey;
 }
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
   --primary-bg-color: #e9e9e9;
   --primary-color: #111217;
+  --secondary-color: #e9e9e9;
   --icon-color: #5a68ad;
+  --text-color: grey;
 }
 
 /* Necessario alterar cores dos elementos para os temas diferentes */
@@ -29,7 +33,7 @@ body {
   color: var(--primary-color);
   font-size: 1rem;
   font-family: "Inter", Tahoma, Geneva, Verdana, sans-serif;
-  /*   transition: all 0.4s ease-in-out; */
+  /* transition: all 0.4s ease-in-out; */
 }
 
 a {
@@ -46,13 +50,13 @@ ul {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background: #111217;
+  background: var(--secondary-color);
   width: 100%;
   padding: 1rem 5rem;
-  z-index: ;
+  z-index: 200;
   position: relative;
   border-bottom: 2px solid var(--primary-color);
-  /* transition: all 0.4s ease-in-out; */
+  transition: all 0.4s ease-in-out;
 }
 
 .header-toggle {
@@ -68,11 +72,56 @@ ul {
   transition: all 0.4s ease-in-out;
 }
 
-#menuHamburguer {
+#menuHamburger {
   cursor: pointer;
-  /*   color: var(--icon-color); */
   font-size: 1.3rem;
   transition: all 0.4s ease-in-out;
+  border: none;
+  color: var(--primary-color);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+#menuMobile {
+  margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+}
+
+.menu-mobile {
+  position: fixed;
+  top: 10;
+  right: 0;
+  background: var(--primary-bg-color);
+  z-index: 100;
+  transform: translateX(100%);
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  border-left: 1px solid var(--primary-color);
+  height: 500vh; /* VH = Viewport */
+  width: 15rem;
+  transition: 1.3s ease-in-out;
+}
+
+.menu-mobile.active {
+  transform: translateX(0%);
+}
+
+.menu-mobile .menu-lista {
+  width: 100%;
+  text-align: center;
+}
+
+.menu-mobile .menu-link {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5rem 0;
 }
 
 .menu-desktop {
@@ -88,7 +137,7 @@ ul {
 
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-  color: #f8f8f8;
+  color: var(--primary-color);
   text-decoration: underline #5a68ad 2px;
   text-underline-offset: 0.5rem;
 }
@@ -96,10 +145,11 @@ ul {
 .logo {
   width: 4rem;
   height: 2rem;
+  filter: invert(1);
 }
 
 .menu-text {
-  color: #979797;
+  color: var(--text-color);
   text-transform: uppercase;
   font-weight: bold;
 }
