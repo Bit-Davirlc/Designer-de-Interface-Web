@@ -1,3 +1,24 @@
+/* Import de Fonte da API GoogleFonts */
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* 
+MontSerrat:
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+Fugaz:
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+:root {
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-corpo: "Montserrat", sans-serif;
+  --fonte-menu: "Montserrat", sans-serif;
+}
+
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
@@ -44,6 +65,20 @@ ul {
   list-style: none;
 }
 
+h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--fonte-corpo);
+  font-weight: 300;
+}
+
+p {
+  font-family: var(--fonte-corpo);
+}
+
 #header {
   /* ID = # */
   display: flex;
@@ -67,7 +102,7 @@ ul {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .menu-link.active .menu-text,
@@ -105,16 +140,6 @@ ul {
   transition: all 0.4s ease-in-out;
 }
 
-/* Menu Mobile */
-
-#menuMobile {
-  margin-left: 1rem;
-}
-
-.btn-menu-mobile {
-  display: none;
-}
-
 #menuHamburger {
   cursor: pointer;
   font-size: 1.3rem;
@@ -129,24 +154,79 @@ ul {
   margin-left: 1.5rem;
 }
 
-#home {
-  padding-top: 2rem;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
+.menu-text {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montaserrat", sans-serif;
+}
+
+/* Flexbox */
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* .main-content .video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video iframe {
+  aspect-ratio: 16/9;
+  width: 95%;
+}
+
+/* Menu Mobile */
+
+#menuMobile {
+  margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+  background: transparent;
+  color: var(--icone-menu-mobile);
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Menu Mobile (estilo e animação) */
+
 .menu-mobile {
+  /* nav */
   position: fixed;
-  top: 10;
+  top: 0;
   right: 0;
-  background: var(--primary-bg-color);
+  background: var(--secondary-color);
   z-index: 100;
   transform: translateX(100%);
   display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-  border-left: 2px solid var(--primary-color);
-  height: 500vh; /* VH = Viewport */
-  width: 15rem;
-  transition: linear;
+  flex-direction: column; /* voltar */
+  padding-top: 4rem;
+  border-left: 1px solid var(--cor-borda);
+  height: 100vh; /* VH = viewport  height  */
+  width: 35%;
+  transition: 0.3s ease-in-out;
 }
 
 .menu-mobile.active {
@@ -156,6 +236,7 @@ ul {
 .menu-mobile .menu-lista {
   width: 100%;
   text-align: center;
+  padding-top: 0.5rem;
 }
 
 .menu-mobile .menu-link {
@@ -164,28 +245,24 @@ ul {
   padding: 0.5rem 0;
 }
 
-.main-content {
-  text-align: left;
-  margin: 1px 1px 1px 1px;
-}
-
-.menu-text {
-  color: var(--text-color);
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.video-inst {
-  
-}
-
 @media (min-width: 768px) {
+  /* A partir de 768px ate o infinito */
+
   .menu-desktop {
     display: flex;
+    /* FLEXBOX */
     min-width: 30%;
   }
 
   .header-toggle {
     min-width: 30%;
+  }
+
+  .btn-menu-mobile {
+    display: none;
+  }
+
+  #home {
+    padding-top: 6rem;
   }
 }
