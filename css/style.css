@@ -22,22 +22,58 @@ Fugaz:
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
+  /* Cores */
+  /* Fundo */
   --primary-bg-color: #1d2a35;
+  /* Alternativas */
   --primary-color: #cfcfcf;
   --secondary-color: #111217;
+  --hover-color: #ffffff;
+  /* Icone Transicao */
   --icon-color: #e69143;
-  --text-color: grey;
+  /* Textos */
+  --text-color: #ffffff;
+  --textselect-color: #ffffff;
+  --textmenu-color: grey;
+  --txtbtn-color: black;
+  /* Icone Social */
   --social-color: grey;
+  /* Gradiente Fim */
+  --gradient-color: linear-gradient(
+    180deg,
+    rgba(29, 42, 53, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(29, 42, 53, 1) 100%
+  );
 }
 
 /* Definir cores tema Light */
 :root[data-theme="light"] {
+  /* Cores */
+  /* Fundo */
   --primary-bg-color: #ffffff;
+  /* Alternativas */
   --primary-color: #111217;
   --secondary-color: #ffffff;
+  --hover-color: #111217;
+  /* Icone Transicao */
   --icon-color: #5a68ad;
-  --text-color: grey;
+  /* Textos */
+  --text-color: black;
+  --textselect-color: black;
+  --textmenu-color: grey;
+  --txtbtn-color: #ffffff;
+  /* Icone Social */
   --social-color: grey;
+  /* Gradiente Fim */
+  --gradient-color: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 /* Necessario alterar cores dos elementos para os temas diferentes */
@@ -49,6 +85,7 @@ html[data-theme="dark"] .logo {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 body {
@@ -56,6 +93,7 @@ body {
   color: var(--primary-color);
 }
 
+/* Personalizacao de Texto */
 a {
   text-decoration: none;
   color: var(--primary-color);
@@ -67,17 +105,45 @@ ul {
 
 h1 {
   font-family: var(--fonte-titulo);
-  font-weight: 400;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 4rem;
 }
 
-h2 {
-  font-family: var(--fonte-corpo);
+.titulo-proj {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
   font-weight: 300;
 }
 
-p {
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--fonte-titulo);
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+p,
+li,
+span {
+  font-size: 1rem;
   font-family: var(--fonte-corpo);
 }
+
+p {
+  text-align: justify;
+}
+
+strong {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* Personalizacao do corpo do site*/
 
 #header {
   /* ID = # */
@@ -88,7 +154,7 @@ p {
   width: 100%;
   padding: 1rem 2rem;
   z-index: 200;
-  position: relative;
+  position: fixed;
   border-bottom: 2px solid var(--primary-color);
   background: var(--secondary-color);
 }
@@ -102,18 +168,17 @@ p {
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-  color: var(--primary-color);
+  color: var(--textselect-color);
   text-decoration: underline #5a68ad 2px;
   text-underline-offset: 0.5rem;
 }
 
 .menu-link:hover .social-icon {
-  color: white;
+  color: var(--textselect-color);
   transition: all 0.1s ease-in-out;
 }
 
@@ -161,10 +226,10 @@ p {
 }
 
 .menu-text {
-  color: var(--text-color);
+  color: var(--textmenu-color);
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Montaserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* Flexbox */
@@ -174,12 +239,63 @@ p {
   gap: 1.5rem;
 }
 
-/* .main-content .video {
+.main-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.menu-social {
+  gap: 1.25rem;
+}
+
+.menu-link:hover .social-icon {
+  color: var(--textselect-color);
+  transition: all 0.1s ease-in-out;
+}
+
+/* Personalização do Botão "Projetos"*/
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  /* S.E -> S.D -> I.D -> I.E */
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  /*   width: 100%;
+ */
+  gap: 1.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primario {
+  border: 1px solid var(--primary-color);
+}
+
+.btn:hover {
+  transform: scale(1.2);
+  background-color: var(--hover-color);
+  transition: 0.3s ease-in-out;
+}
+
+.btn span,
+.btn i {
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.btn:hover span,
+.btn:hover i {
+  color: var(--txtbtn-color);
+  transition: 0.3 ease-in-out;
+  font-weight: 500;
+}
+
+/* Personalização Video */
 .video {
   display: flex;
   justify-content: center;
@@ -188,7 +304,16 @@ p {
 
 .video iframe {
   aspect-ratio: 16/9;
-  width: 95%;
+  width: 100%;
+  box-shadow: 0px 0px 15px 7px #111217;
+}
+
+/* Voltar e atualizar */
+#home,
+.projetos,
+.sobre,
+.contato {
+  padding: 2.5rem 1rem;
 }
 
 /* Menu Mobile */
@@ -222,10 +347,10 @@ p {
   transform: translateX(100%);
   display: flex;
   flex-direction: column; /* voltar */
-  padding-top: 4rem;
-  border-left: 1px solid var(--cor-borda);
+  padding-top: 5rem;
+  border-left: 2px solid var(--primary-color);
   height: 100vh; /* VH = viewport  height  */
-  width: 35%;
+  width: 25%;
   transition: 0.3s ease-in-out;
 }
 
@@ -242,11 +367,46 @@ p {
 .menu-mobile .menu-link {
   display: inline-block;
   font-size: 1rem;
-  padding: 0.5rem 0;
+  padding: 0.7rem 0;
+}
+
+/* Personalização trecho "Conhecimento"*/
+.conhecimento {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--gradient-color);
+  padding: 5rem 1rem 5rem;
+  margin-top: -2rem;
+}
+
+.conhecimento h2 {
+  font-size: 2rem;
+  color: #cfcfcf;
+  text-transform: initial;
+  letter-spacing: normal;
+  font-weight: 250;
+}
+
+/* Medidas Responsivas */
+@media (max-width: 768px) {
+  /* Até 768px */
+  #home {
+    padding-top: 6rem;
+  }
+
+  .conhecimento h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
-  /* A partir de 768px ate o infinito */
+  /* A partir de 768px a diante */
+
+  #header {
+    padding: 1rem 6rem;
+  }
 
   .menu-desktop {
     display: flex;
@@ -262,7 +422,55 @@ p {
     display: none;
   }
 
+  #home,
+  .projetos,
+  .contatos {
+    padding: 8rem 6rem 4rem 6rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .conhecimento h2 {
+    font-size: 2rem;
+  }
+
+  .titulo-proj {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* A partir de 1200px */
   #home {
-    padding-top: 6rem;
+    padding: 6rem 6rem 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .conhecimento h2 {
+    font-size: 2rem;
+  }
+
+  .titulo-proj {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  /* A partir de 1200px */
+  h1 {
+    font-size: 6rem;
+  }
+
+  .titulo-proj {
+    font-size: 4.5rem;
+  }
+
+  .conhecimento h2 {
+    font-size: 2.5rem;
   }
 }
