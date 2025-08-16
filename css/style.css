@@ -110,7 +110,7 @@ h1 {
   font-size: 4rem;
 }
 
-.titulo-proj {
+.titulo-projeto {
   font-size: 2rem;
   text-align: center;
   letter-spacing: 0.4rem;
@@ -243,6 +243,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  padding-top: 2.5rem;
 }
 
 .menu-social {
@@ -296,12 +297,68 @@ strong {
 }
 
 /* Personalização do bloco Projetos */
-.bloco-projetos {
-  margin-top: 3rem;
-  background-color: #111217;
-  box-shadow: 0px 0px 15px 15px #111217;
+/* Projetos */
+.projetos {
+  /* FLEX // Responsividade */
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  scroll-margin-top: 2.5rem;
 }
-.item-projeto {
+
+.projeto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  /* box-shadow: 0px 0px 15px 15px #111217; */
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card-cover {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.card-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.card-description {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.card-item {
+  /* Li */
+  margin-left: 10px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Personalização Video */
@@ -445,8 +502,25 @@ strong {
     font-size: 2rem;
   }
 
-  .titulo-proj {
+  .titulo-projeto {
     font-size: 2.5rem;
+  }
+}
+/* Projeto-card =  */
+/* Card-cover = imagem-projetos */
+
+@media (min-width: 992px) {
+  .projeto-card {
+    flex-direction: row;
+  }
+
+  .projeto-card.card-reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .card-cover {
+    width: 55%;
   }
 }
 
@@ -464,7 +538,7 @@ strong {
     font-size: 2rem;
   }
 
-  .titulo-proj {
+  .titulo-projeto {
     font-size: 3rem;
   }
 }
@@ -475,7 +549,7 @@ strong {
     font-size: 6rem;
   }
 
-  .titulo-proj {
+  .titulo-projeto {
     font-size: 4.5rem;
   }
 
