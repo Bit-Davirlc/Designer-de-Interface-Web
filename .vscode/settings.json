@@ -6,6 +6,6 @@
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "editor.formatOnSave": true,
-  "editor.fontSize": 24,
+  "editor.fontSize": 16,
   "workbench.iconTheme": "vscode-icons"
 }
