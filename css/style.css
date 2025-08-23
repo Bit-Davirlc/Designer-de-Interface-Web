@@ -325,7 +325,6 @@ strong {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
-  
 }
 
 .card-body {
@@ -455,6 +454,25 @@ strong {
   text-transform: initial;
   letter-spacing: normal;
   font-weight: 250;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  scroll-margin-top: 2.5rem;
+}
+
+.sobre-content1,
+.sobre-content2 {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 2rem;
+}
+
+.sobre-logo {
+  width: 100%;
 }
 
 /* Medidas Responsivas */
