@@ -346,7 +346,7 @@ strong {
 .card-title {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
@@ -481,7 +481,7 @@ strong {
 .sobre-content2 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 2rem;
 }
 
@@ -522,6 +522,57 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.accordion {
+  display: inline-block;
+  width: 100%;
+}
+
+.accordion-header {
+  display: flex;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  text-align: start;
+  border: 1px solid var(--text-color);
+}
+
+.accordion-body {
+  display: none;
+  padding: 1.25rem;
+  color: var(--primary-color);
+  gap: 0.8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: grey;
+}
+
+.accordion-item.active .accordion-body {
+  display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.bi-caret-down-fill {
+  transition: all 0.5s ease-in-out;
+  color: var(--text-color);
+}
+
+.accordion-item.active .accordion-header {
+  background-color: red;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion-header span {
+  font-weight: 400;
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
 }
 
 /* Medidas Responsivas */
