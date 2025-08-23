@@ -26,9 +26,9 @@ Fugaz:
   /* Fundo */
   --primary-bg-color: #1d2a35;
   /* Alternativas */
-  --primary-color: #cfcfcf;
+  --primary-color: white;
   --secondary-color: #111217;
-  --hover-color: #ffffff;
+  --hover-color: white;
   /* Icone Transicao */
   --icon-color: #e69143;
   /* Textos */
@@ -52,10 +52,10 @@ Fugaz:
 :root[data-theme="light"] {
   /* Cores */
   /* Fundo */
-  --primary-bg-color: #ffffff;
+  --primary-bg-color: white;
   /* Alternativas */
   --primary-color: #111217;
-  --secondary-color: #ffffff;
+  --secondary-color: white;
   --hover-color: #111217;
   /* Icone Transicao */
   --icon-color: #5a68ad;
@@ -63,7 +63,7 @@ Fugaz:
   --text-color: black;
   --textselect-color: black;
   --textmenu-color: grey;
-  --txtbtn-color: #ffffff;
+  --txtbtn-color: white;
   /* Icone Social */
   --social-color: grey;
   /* Gradiente Fim */
@@ -121,6 +121,12 @@ h1 {
   font-weight: 300;
 }
 
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+}
+
 h3 {
   font-size: 1.55rem;
 }
@@ -130,8 +136,9 @@ h3,
 h4,
 h5 {
   font-family: var(--fonte-titulo);
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
+  color: var(--text-color);
 }
 
 p,
@@ -139,6 +146,7 @@ li,
 span {
   font-size: 1rem;
   font-family: var(--fonte-corpo);
+  color: var(--text-color);
 }
 
 p {
@@ -325,6 +333,7 @@ strong {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+  border: 3px solid var(--primary-color);
 }
 
 .card-body {
@@ -456,6 +465,7 @@ strong {
   font-weight: 250;
 }
 
+/* Personalização trecho "Sobre" */
 .sobre {
   display: flex;
   flex-direction: column;
@@ -474,6 +484,25 @@ strong {
 .sobre-logo {
   width: 100%;
   border-radius: 100%;
+  pointer-events: none;
+  border: 3px solid var(--primary-color);
+}
+
+.sobre-desciption {
+}
+
+.sobre-icones {
+}
+
+.sobre-icones i {
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  gap: 0.5rem;
 }
 
 /* Medidas Responsivas */
@@ -544,6 +573,18 @@ strong {
   .card-cover {
     width: 55%;
   }
+
+  .sobre {
+    gap: 5rem;
+  }
+
+  .sobre-content1,
+  .sobre-content2 {
+    display: grid;
+    grid-template-columns: 34% 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -554,6 +595,10 @@ strong {
 
   h1 {
     font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
   }
 
   .conhecimento h2 {
