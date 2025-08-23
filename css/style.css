@@ -88,6 +88,10 @@ html[data-theme="dark"] .logo {
   scrollbar-width: thin;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--primary-bg-color);
   color: var(--primary-color);
@@ -105,9 +109,9 @@ ul {
 
 h1 {
   font-family: var(--fonte-titulo);
-  font-weight: 300;
+  font-weight: 200;
   text-transform: uppercase;
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .titulo-projeto {
@@ -240,13 +244,6 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding-top: 2.5rem;
 }
 
 .menu-social {
