@@ -472,7 +472,8 @@ strong {
 }
 
 .sobre-logo {
-  width: 1vh;
+  width: 100%;
+  border-radius: 100%;
 }
 
 /* Medidas Responsivas */
