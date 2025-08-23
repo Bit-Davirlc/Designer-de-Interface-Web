@@ -230,6 +230,7 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  overflow-wrap: break-word;
 }
 
 .menu-text {
@@ -324,6 +325,7 @@ strong {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+  
 }
 
 .card-body {
