@@ -465,14 +465,14 @@ strong {
 
 .sobre-content1,
 .sobre-content2 {
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
 }
 
 .sobre-logo {
-  width: 5vh;
+  width: 1vh;
 }
 
 /* Medidas Responsivas */
