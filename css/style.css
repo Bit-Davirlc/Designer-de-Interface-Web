@@ -22,57 +22,70 @@ Fugaz:
 /* Definir cores tema Dark */
 :root,
 :root[data-theme="dark"] {
-  /* Cores */
   /* Fundo */
-  --primary-bg-color: #1d2a35;
+  --primary-bg-color: #1e293b; /* azul petróleo escuro */
+  --secondary-color: #0f172a; /* quase preto */
+
   /* Alternativas */
-  --primary-color: white;
-  --secondary-color: #111217;
-  --hover-color: white;
-  /* Icone Transicao */
-  --icon-color: #e69143;
+  --primary-color: #f8fafc; /* branco suave */
+  --hover-color: #e2e8f0; /* cinza claro */
+  --border-color: #334155; /* cinza azulado */
+  --reverseborder-color: #f8fafc;
+
+  /* Ícone Transição */
+  --icon-color: #f59e0b; /* âmbar/dourado */
+
   /* Textos */
-  --text-color: #ffffff;
-  --textselect-color: #ffffff;
-  --textmenu-color: grey;
-  --txtbtn-color: black;
-  /* Icone Social */
-  --social-color: grey;
-  /* Gradiente Fim */
+  --txttitulo-color: #f1f5f9; /* branco azulado */
+  --text-color: #e2e8f0;
+  --textselect-color: #facc15; /* amarelo destaque ao selecionar */
+  --textmenu-color: #94a3b8; /* cinza médio */
+  --txtbtn-color: #0f172a;
+
+  /* Ícone Social */
+  --social-color: #94a3b8; /* cinza médio */
+
+  /* Gradiente */
   --gradient-color: linear-gradient(
     180deg,
-    rgba(29, 42, 53, 1) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(29, 42, 53, 1) 100%
+    #1e293b 0%,
+    #0f172a 30%,
+    #0f172a 70%,
+    #1e293b 100%
   );
 }
 
-/* Definir cores tema Light */
 :root[data-theme="light"] {
-  /* Cores */
   /* Fundo */
-  --primary-bg-color: white;
+  --primary-bg-color: #f8fafc; /* off-white */
+  --secondary-color: #ffffff;
+
   /* Alternativas */
-  --primary-color: #111217;
-  --secondary-color: white;
-  --hover-color: #111217;
-  /* Icone Transicao */
-  --icon-color: #5a68ad;
+  --primary-color: #0f172a; /* azul bem escuro */
+  --hover-color: #1e293b; /* azul petróleo */
+  --border-color: #cbd5e1; /* cinza claro */
+  --reverseborder-color: #ffffff;
+
+  /* Ícone Transição */
+  --icon-color: #2563eb; /* azul vivo */
+
   /* Textos */
-  --text-color: black;
-  --textselect-color: black;
-  --textmenu-color: grey;
-  --txtbtn-color: white;
-  /* Icone Social */
-  --social-color: grey;
-  /* Gradiente Fim */
+  --txttitulo-color: #0f172a;
+  --text-color: #1e293b;
+  --textselect-color: #2563eb; /* azul */
+  --textmenu-color: #64748b; /* cinza médio */
+  --txtbtn-color: #ffffff;
+
+  /* Ícone Social */
+  --social-color: #64748b; /* cinza médio */
+
+  /* Gradiente */
   --gradient-color: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(0, 0, 0, 1) 30%,
-    rgba(0, 0, 0, 1) 70%,
-    rgba(255, 255, 255, 1) 100%
+    #f8fafc 0%,
+    #e2e8f0 30%,
+    #e2e8f0 70%,
+    #f8fafc 100%
   );
 }
 
@@ -150,10 +163,6 @@ span {
   color: var(--text-color);
 }
 
-p {
-  text-align: justify;
-}
-
 strong {
   color: var(--text-color);
   font-weight: 400;
@@ -171,7 +180,7 @@ strong {
   padding: 1rem 2rem;
   z-index: 200;
   position: fixed;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--border-color);
   background: var(--secondary-color);
 }
 
@@ -189,7 +198,7 @@ strong {
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
   color: var(--textselect-color);
-  text-decoration: underline #5a68ad 2px;
+  text-decoration: underline var(--textselect-color) 2px;
   text-underline-offset: 0.5rem;
 }
 
@@ -202,6 +211,11 @@ strong {
   color: var(--social-color);
   font-size: 1.5rem;
 }
+
+/* ul:last-child {
+  color: var(--social-color);
+  font-size: 20rem;
+} */
 
 .logo {
   width: 4rem;
@@ -283,7 +297,7 @@ strong {
 }
 
 .btn-primario {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--border-color);
 }
 
 .btn:hover {
@@ -333,7 +347,7 @@ strong {
   object-fit: cover;
   object-position: center;
   pointer-events: none;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--border-color);
 }
 
 .card-body {
@@ -425,7 +439,7 @@ strong {
   display: flex;
   flex-direction: column; /* voltar */
   padding-top: 5rem;
-  border-left: 2px solid var(--primary-color);
+  border-left: 2px solid var(--border-color);
   height: 100vh; /* VH = viewport  height  */
   width: 25%;
   transition: 0.3s ease-in-out;
@@ -460,7 +474,7 @@ strong {
 
 .conhecimento h2 {
   font-size: 2rem;
-  color: #cfcfcf;
+  color: var(--txttitulo-color);
   text-transform: initial;
   letter-spacing: normal;
   font-weight: 250;
@@ -474,10 +488,6 @@ strong {
   scroll-margin-top: 2.5rem;
 }
 
-/* .sobre h2 {
-  text-align: start;
-} */
-
 .sobre-content1,
 .sobre-content2 {
   display: flex;
@@ -490,7 +500,7 @@ strong {
   width: 100%;
   border-radius: 100%;
   pointer-events: none;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--border-color);
 }
 
 .sobre-description {
@@ -510,12 +520,17 @@ strong {
   font-size: 1.25rem;
 }
 
-.sobre-content2 .col1,
-.sobre-content2 .col2 {
+.sobre-content2 .col1 {
   display: flex;
   flex-direction: column;
   text-align: justify;
   gap: 2rem;
+}
+
+.sobre-content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
 }
 
 .sobre-content2 .col1 .row1,
@@ -536,9 +551,9 @@ strong {
   padding: 0.75rem 1rem;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--secondary-color);
   text-align: start;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--border-color);
   cursor: pointer;
 }
 
@@ -549,10 +564,9 @@ strong {
   gap: 0.8rem;
   flex-direction: column;
   align-items: flex-start;
-  background-color: grey;
-  border: solid 1px white;
-/*   border-radius: 0 0 10px 10px;
- */}
+  background-color: var(--secondary-color);
+  border: solid 1px var(--border-color);
+}
 
 .accordion-item.active .accordion-body {
   display: flex;
@@ -569,18 +583,147 @@ strong {
 }
 
 .accordion-item.active .accordion-header {
-  background-color: red;
-  transition: all 0.5s ease-in-out;
+  background-color: var(--hover-color);
+}
+
+.accordion-item.active span,
+.accordion-item.active i {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.accordion-item:hover .accordion-header {
+  background-color: var(--hover-color);
+  transition: 0.3s ease-in-out;
+  color: var(--text-color);
+}
+
+.accordion-item:hover span,
+.accordion-item:hover i {
+  color: var(--txtbtn-color);
+  transition: 0.3 ease-in-out;
+  font-weight: 500;
 }
 
 .accordion-header span {
   font-weight: 400;
   font-family: var(--fonte-titulo);
   text-transform: uppercase;
+  color: var(--primary-color);
 }
 
-.sobre h4{
-  font-weight:bold;
+.sobre h4 {
+  font-weight: bold;
+}
+
+/* Perosnalização Contato */
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: solid 2px var(--border-color);
+  border-bottom: solid 2px var(--border-color);
+}
+
+.contato .btn {
+  width: auto;
+  color: white;
+}
+
+.contato .menu-social {
+  justify-content: center;
+  align-items: center;
+}
+
+/* GRID CSS CONTATO */
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.contato-formulario,
+.contato-mapa {
+  width: 100%;
+}
+
+.contato-formulario h2 {
+  margin-bottom: 1rem;
+  color: var(--txttitulo-color);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: var(--border-color);
+  border-radius: 0.5rem;
+  border: solid 1px var(--border-color);
+}
+
+.form-contato textarea {
+  line-height: 1.5;
+}
+
+.form-contato button {
+  align-items: center;
+  align-self: flex-start;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contato p {
+  width: 80%;
+  text-align: center;
+}
+
+.contato-formulario label {
+  font-family: var(--fonte-corpo);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contato-mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-width: 400px;
+  border-radius: 0.75rem;
+  border: none;
+}
+
+/* Roda Pé */
+footer p {
+  font-size: 0.875rem;
+  text-align: center;
+  padding: 1rem;
+  color: var(--textmenu-color);
+}
+
+footer i {
+  font-size: 0.85rem;
+  color: var(--icon-color);
+}
+
+.footer-link {
+  color: var(--textmenu-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+  color: var(--hover-color);
 }
 
 /* Medidas Responsivas */
@@ -592,6 +735,19 @@ strong {
 
   .conhecimento h2 {
     font-size: 1.5rem;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-formulario,
+  .contato-mapa {
+    width: 100%;
+  }
+
+  .contato-formulario h2 {
+    text-align: center;
   }
 }
 
@@ -634,7 +790,12 @@ strong {
   .titulo-projeto {
     font-size: 2.5rem;
   }
+
+  .contato {
+    padding: 6rem;
+  }
 }
+
 /* Projeto-card =  */
 /* Card-cover = imagem-projetos */
 

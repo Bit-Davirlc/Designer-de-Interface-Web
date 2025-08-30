@@ -426,21 +426,19 @@
         <!-- Formulário -->
         <div class="contato-formulario">
           <h2>Fale Comigo</h2>
-          <form action="" method="post" class="form-email">
+          <form
+            action="https://formspree.io/f/meolgjlw"
+            method="post"
+            class="form-contato"
+          >
             <label>Nome Completo:</label>
-            <input
-              type="text"
-              name="nome"
-              id="nome"
-              placeholder="Nome Completo"
-              required
-            />
+            <input type="text" name="nome" id="nome" placeholder="" required />
             <label>Seu email:</label>
             <input
               type="email"
               name="email"
               id="e-mail"
-              placeholder="E-mail"
+              placeholder=""
               required
             />
             <label>Telefone:</label>
@@ -448,7 +446,7 @@
               type="tel"
               name="telefone"
               id="telefone"
-              placeholder="Telefone"
+              placeholder=""
               required
             />
             <label>Assunto:</label>
@@ -456,14 +454,15 @@
               type="text"
               name="assunto"
               id="mensagem"
-              placeholder="Assunto"
+              placeholder=""
               required
             />
+            <label>Mensagem:</label>
             <textarea
               name="mensagem"
               id="mensagem"
               rows="6"
-              placeholder="Digite sua mensagem"
+              placeholder=""
             ></textarea>
 
             <!-- your other form fields go here -->
@@ -473,10 +472,31 @@
             </button>
           </form>
         </div>
+        <div class="contato-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.160287273279!2d-46.735911900000005!3d-23.526736699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef8b811e8e3a1%3A0xa7564bb4c78f41b3!2sSenai%20Vila%20Leopoldina%20-%20Mariano%20Ferraz!5e0!3m2!1spt-BR!2sbr!4v1756575089210!5m2!1spt-BR!2sbr"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
 
-    <footer></footer>
+    <footer>
+      <p>
+        &copy; 2025. Portfolio desenvolvido para fins educativos com base nas
+        aulas no por Davi Robson
+        <a href="https://sp.senai.br/unidade/leopoldina/" target="_blank" class="footer-link">
+          Senai Leopoldina - SP
+        </a>
+        Desenvolvido por
+        <a href="https://github.com/Bit-Davirlc" target="_blank" class="footer-link">
+          <i class="bi bi-github"></i>
+          Davi Robson
+        </a>
+      </p>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>
