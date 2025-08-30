@@ -129,6 +129,7 @@ h2 {
 
 h3 {
   font-size: 1.55rem;
+  margin-bottom: 1rem;
 }
 
 h2,
@@ -514,7 +515,7 @@ strong {
   display: flex;
   flex-direction: column;
   text-align: justify;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
 .sobre-content2 .col1 .row1,
@@ -538,6 +539,7 @@ strong {
   background-color: transparent;
   text-align: start;
   border: 1px solid var(--text-color);
+  cursor: pointer;
 }
 
 .accordion-body {
@@ -548,7 +550,9 @@ strong {
   flex-direction: column;
   align-items: flex-start;
   background-color: grey;
-}
+  border: solid 1px white;
+/*   border-radius: 0 0 10px 10px;
+ */}
 
 .accordion-item.active .accordion-body {
   display: flex;
@@ -573,6 +577,10 @@ strong {
   font-weight: 400;
   font-family: var(--fonte-titulo);
   text-transform: uppercase;
+}
+
+.sobre h4{
+  font-weight:bold;
 }
 
 /* Medidas Responsivas */
@@ -610,7 +618,7 @@ strong {
 
   #home,
   .projetos,
-  .contatos,
+  .contato,
   .sobre {
     padding: 8rem 6rem 4rem 6rem;
   }
