@@ -1,0 +1,151 @@
+/* Import de Fonte da API GoogleFonts */
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*
+MontSerrat:
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+Fugaz:
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+:root {
+  --fonte-titulo: "Montserrat", sans-serif;
+  --fonte-corpo: "Montserrat", sans-serif;
+  --fonte-menu: "Montserrat", sans-serif;
+}
+
+/* Definir cores tema Dark */
+:root,
+:root[data-theme="dark"] {
+  /* Fundo */
+  --primary-bg-color: #1e293b; /* azul petróleo escuro */
+  --secondary-color: #0f172a; /* quase preto */
+
+  /* Alternativas */
+  --primary-color: #f8fafc; /* branco suave */
+  --hover-color: #e2e8f0; /* cinza claro */
+  --border-color: #334155; /* cinza azulado */
+  --reverseborder-color: #f8fafc;
+
+  /* Ícone Transição */
+  --icon-color: #f59e0b; /* âmbar/dourado */
+
+  /* Textos */
+  --txttitulo-color: #f1f5f9; /* branco azulado */
+  --text-color: #e2e8f0;
+  --textselect-color: #facc15; /* amarelo destaque ao selecionar */
+  --textmenu-color: #94a3b8; /* cinza médio */
+  --txtbtn-color: #0f172a;
+
+  /* Ícone Social */
+  --social-color: #94a3b8; /* cinza médio */
+
+  /* Gradiente */
+  --gradient-color: linear-gradient(
+    180deg,
+    #1e293b 0%,
+    #0f172a 30%,
+    #0f172a 70%,
+    #1e293b 100%
+  );
+}
+
+:root[data-theme="light"] {
+  /* Fundo */
+  --primary-bg-color: #f8fafc; /* off-white */
+  --secondary-color: #ffffff;
+
+  /* Alternativas */
+  --primary-color: #0f172a; /* azul bem escuro */
+  --hover-color: #1e293b; /* azul petróleo */
+  --border-color: #cbd5e1; /* cinza claro */
+  --reverseborder-color: #ffffff;
+
+  /* Ícone Transição */
+  --icon-color: #2563eb; /* azul vivo */
+
+  /* Textos */
+  --txttitulo-color: #0f172a;
+  --text-color: #1e293b;
+  --textselect-color: #2563eb; /* azul */
+  --textmenu-color: #64748b; /* cinza médio */
+  --txtbtn-color: #ffffff;
+
+  /* Ícone Social */
+  --social-color: #64748b; /* cinza médio */
+
+  /* Gradiente */
+  --gradient-color: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #e2e8f0 30%,
+    #e2e8f0 70%,
+    #f8fafc 100%
+  );
+}
+
+body {
+  margin: 0;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Escurecimento */
+  z-index: 1;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 500px;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 2;
+  /* Fica acima do ::before */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* Filtro adicional opcional */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption h5,
+.carousel-caption p {
+  color: #fff;
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}

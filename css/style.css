@@ -1,6 +1,5 @@
 /* Import de Fonte da API GoogleFonts */
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@
 
 /*
 MontSerrat:
@@ -751,6 +750,16 @@ footer i {
   transition: 0.3s ease-in-out;
   color: var(--icon-color);
 }
+/* #carroselBootstrap {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+} */
 
 /* Medidas Responsivas */
 @media (max-width: 768px) {
