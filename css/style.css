@@ -1,5 +1,6 @@
 /* Import de Fonte da API GoogleFonts */
 @import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@
 
 /*
 MontSerrat:
@@ -441,7 +442,7 @@ strong {
   padding-top: 5rem;
   border-left: 2px solid var(--border-color);
   height: 100vh; /* VH = viewport  height  */
-  width: 25%;
+  width: 35%;
   transition: 0.3s ease-in-out;
 }
 
@@ -726,6 +727,31 @@ footer i {
   color: var(--hover-color);
 }
 
+/* Botão Voltar ao Topo */
+#btn-topo {
+  position: fixed;
+  z-index: 99;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  border: solid 2px var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: var(--reverseborder-color);
+  align-items: center;
+  display: none;
+  justify-content: center;
+  width: 40px;
+  height: 45px;
+}
+
+#btn-topo:hover {
+  transform: scale(1.2);
+  background-color: var(--hover-color);
+  transition: 0.3s ease-in-out;
+  color: var(--icon-color);
+}
+
 /* Medidas Responsivas */
 @media (max-width: 768px) {
   /* Até 768px */
@@ -748,6 +774,11 @@ footer i {
 
   .contato-formulario h2 {
     text-align: center;
+  }
+
+  .menu-mobile {
+    /* nav */
+    width: 100%;
   }
 }
 

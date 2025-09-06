@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuHamburger = document.getElementById("menuHamburger");
   const menuMobile = document.getElementById("menuMobile");
   const icon = menuHamburger?.querySelector("i");
+  const btnTopo = document.getElementById("btn-topo");
 
   // Alternar tema (claro/escuro)
   function changeTheme() {
@@ -110,4 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      btnTopo.style.display = "block";
+    } else {
+      btnTopo.style.display = "none";
+    }
+  };
+
+  btnTopo.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 });
