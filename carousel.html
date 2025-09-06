@@ -15,42 +15,88 @@
     <link rel="stylesheet" href="css/carousel.css" />
   </head>
   <body>
-      <div id="carouselProjetos" class="carousel slide" data-bs-ride="carousel">
-    <!-- Indicadores -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselProjetos" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselProjetos" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselProjetos" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-    <!-- Slides -->
-    <div class="carousel-inner text-center">
-
-      <div class="carousel-item active ">
-        <img src="img/slides/slide1.jpg" class="d-block w-100" alt="Josi's Box">
-        <div class="carousel-caption d-md-block">
-          <h5>Josi's Box Ecommerce</h5>
-          <p>Loja de livros com carrinho, filtros e favoritos.</p>
-        </div>
+    <div id="carouselProjetos" class="carousel slide" data-bs-ride="carousel">
+      <!-- Indicadores -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselProjetos"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselProjetos"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselProjetos"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
       </div>
 
-      <div class="carousel-item ">
-        <img src="img/slides/slide2.jpg" class="d-block w-100" alt="Portfolio">
-        <div class="carousel-caption d-md-block">
-          <h5>Portfolio Pessoal</h5>
-          <p>Design criativo com projetos e biografia.</p>
+      <!-- Slides -->
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <img
+            src="img/slides/slide1.jpg"
+            class="d-block w-100"
+            alt="Josi's Box"
+          />
+          <div class="carousel-caption d-md-block">
+            <h5>Josi's Box Ecommerce</h5>
+            <p>Loja de livros com carrinho, filtros e favoritos.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="img/slides/slide2.jpg"
+            class="d-block w-100"
+            alt="Portfolio"
+          />
+          <div class="carousel-caption d-md-block">
+            <h5>Portfolio Pessoal</h5>
+            <p>Design criativo com projetos e biografia.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="img/slides/slide3.jpg"
+            class="d-block w-100"
+            alt="Games Store"
+          />
+          <div class="carousel-caption d-md-block">
+            <h5>Games Store</h5>
+            <p>Loja de games com carrinho e filtros personalizados.</p>
+          </div>
         </div>
       </div>
-
-      <div class="carousel-item ">
-        <img src="img/slides/slide3.jpg" class="d-block w-100" alt="Games Store">
-        <div class="carousel-caption d-md-block">
-          <h5>Games Store</h5>
-          <p>Loja de games com carrinho e filtros personalizados.</p>
-        </div>
-      </div>
-
+      <!-- Botões navegação -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselProjetos"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselProjetos"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
 
     <!-- Bootstrap JS (inclui Popper) -->
